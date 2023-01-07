@@ -1,3 +1,5 @@
+using System;
+
 namespace ZaszloArusAPI_EF.Models
 {
     public class ErrorViewModel
