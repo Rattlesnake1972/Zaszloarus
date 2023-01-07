@@ -7,7 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\img\" />
+    <Content Include="img\japan.jpg" />
+    <Content Include="img\magyar.jpg" />
+    <Content Include="img\nemet.jpg" />
+    <Content Include="img\orosz.jpg" />
+    <Content Include="img\ukran.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="img\" />
   </ItemGroup>
 
 </Project>
