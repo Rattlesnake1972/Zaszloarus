@@ -1,24 +1,36 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, NavLink, Routes, Route } from "react-router-dom";
+import { FlagListPage } from "./FlagListPage";
+import { FlagSinglePage } from "./FlagSinglePage";
+import { FlagCreatePage } from "./FlagCreatePage";
+import { FlagModPage } from "./FlagModPage";
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <NavLink to={'/'} className={({isActive}) => "nav-link" + (isActive ? "active" : "")}>
+                <span className="nav-link">Zászlók</span>
+              </NavLink>
+              </li>
+              <li className="nav-item">
+              <NavLink to={'/uj-zászló'} className={({isActive}) => "nav-link" + (isActive ? "active" : "")}>
+                <span className="nav-link">Új zászló</span>
+              </NavLink>
+              </li>
+          </ul>
+        </div>
+      </nav>
+      <Routes>
+        <Route path="/" exact element={<FlagListPage />} />
+        <Route path="/pizza/:productID" exact element={<FlagSinglePage />} />
+        <Route path="/uj-zaszlo" exact element={<FlagCreatePage />} />
+        <Route path="/mod-zaszlo/:productId" exact element={<FlagModPage />} />
+      </Routes>
+    </Router>
   );
 }
 
