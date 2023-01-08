@@ -1,20 +1,26 @@
 ﻿{
+
+  "$schema": "http://json.schemastore.org/launchsettings.json",
   "iisSettings": {
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iisExpress": {
-      "applicationUrl": "http://localhost:41149",
-      "sslPort": 44309
+      "applicationUrl": "http://localhost:18373",
+      "sslPort": 44326
     }
   },
+
   "profiles": {
     "ZaszloArusAPI_EF": {
       "commandName": "Project",
+
       "dotnetRunMessages": true,
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7073;http://localhost:5276",
+      "applicationUrl": "https://localhost:5001;http://localhost:5000;",
+
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
+
       }
     },
     "IIS Express": {
